@@ -16,27 +16,17 @@ export default function Signup() {
     <div className="signup">
       {width <= 650 ? (
         <div className="center-panel">
+          <h2 className="centered-text">Sign up for free</h2>
           <SignupForm />
         </div>
       ) : (
         <>
-          <div className="left-panel" style={{ width: "40%", display: "inline-block" }}>
+          <div className="center-panel-small">
+            <h2 className="centered-text">Sign up for free</h2>
             <SignupForm />
           </div>
-          <div className="right-panel">
-            <h2>
-              #1 Bloggin website for everyone around the globe. Totally free and
-              easy to use.
-            </h2>
-            <Player
-              autoplay
-              loop
-              src="https://assets2.lottiefiles.com/packages/lf20_jcikwtux.json"
-            />
-          </div>
         </>
-      )
-      }
-    </div >
+      )}
+    </div>
   );
 }

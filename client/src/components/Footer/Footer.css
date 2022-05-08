@@ -1,0 +1,86 @@
+#myfoot {
+  /* background-color: black; */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  padding-top: 3rem;
+  padding-right: 5rem;
+}
+
+#upper {
+  display: flex;
+  flex-direction: row;
+  height: fit-content;
+  margin-bottom: 3rem;
+}
+
+#upper1 {
+  display: flex;
+  flex-direction: column;
+  /* width: 60vw; */
+}
+#upper1 p {
+  font-size: 2vmin;
+}
+
+#upper2 {
+  text-align: center;
+  width: 40vw;
+}
+
+#down {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#down1 {
+  display: flex;
+  flex-direction: column;
+  width: 25vw;
+  /* padding: 0 !important; */
+}
+
+
+#down2 > ol > li, #down3 > ol > li, #down4 > ol > li {
+  width: 20vw;
+  size: 3px;
+}
+
+#down4 {
+  margin-right: 5rem;
+}
+
+.mrg {
+  margin-left: 25px;
+}
+
+footer > p {
+  font-size: 4vmin;
+}
+
+footer > h1,footer > h2,footer > h3,footer > h4 {
+  font-size: 5vmin;
+}
+footer > a, footer > a:hover, footer > a:focus, footer > a:active {
+  text-decoration: none !important;
+  color: inherit ;
+}
+.table a, footer > a:hover, footer > a:focus,footer > a:active {
+  color: gray !important ;
+}
+
+#upper1 input{
+  background: none;
+  outline: none;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: 1px solid gray;
+  color: white;
+  margin-top: 1rem;
+  width: 45vw;
+}

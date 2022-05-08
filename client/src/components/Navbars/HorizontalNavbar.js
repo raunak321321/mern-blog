@@ -14,6 +14,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { userAuthActions } from "./../../redux/actions/actionCreator";
 import About from "./About";
 import Help from "./Help";
+import './navBar.css'
 const { SubMenu } = Menu;
 
 export default function HorizontalNavbar() {
@@ -25,7 +26,7 @@ export default function HorizontalNavbar() {
       <Menu selectedKeys={"logo"} mode="horizontal" theme="dark">
         <Menu.Item className="unhoverable-menu-item">
           <a href="/">
-            <Avatar src={blogLogo} shape="square" /> &nbsp; Blog App
+            <Avatar src={blogLogo} className="sizeOfAvatar" /> &nbsp;
           </a>
         </Menu.Item>
 
