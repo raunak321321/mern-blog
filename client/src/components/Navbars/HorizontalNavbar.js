@@ -5,11 +5,15 @@ import {
   SettingOutlined,
   GroupOutlined,
   FormOutlined,
+  InfoCircleOutlined,
+  QuestionCircleOutlined
 } from "@ant-design/icons";
 import { Menu, Avatar } from "antd";
-import blogLogo from "./../../assets/images/blogging.png";
+import blogLogo from "./../../assets/images/logo.png";
 import { useSelector, useDispatch } from "react-redux";
 import { userAuthActions } from "./../../redux/actions/actionCreator";
+import About from "./About";
+import Help from "./Help";
 const { SubMenu } = Menu;
 
 export default function HorizontalNavbar() {
@@ -34,7 +38,7 @@ export default function HorizontalNavbar() {
               className="float-right unhoverable-menu-item"
             >
               <Menu.Item key="userProfile" icon={<SettingOutlined />}>
-                <a href="/user/profile">User Profile</a>
+                <a icon={<LoginOutlined />} href="/user/profile">User Profile</a>
               </Menu.Item>
               <Menu.Item key="userPosts" icon={<GroupOutlined />}>
                 <a href="/user/posts">User Posts</a>
@@ -70,6 +74,12 @@ export default function HorizontalNavbar() {
               className="float-right"
             >
               <a href="/signup">Signup</a>
+            </Menu.Item>
+            <Menu.Item className="float-right" key="userProfile" icon={<InfoCircleOutlined />}>
+              <a icon={<InfoCircleOutlined />} href="/about">About</a>
+            </Menu.Item>
+            <Menu.Item className="float-right" key="userProfile" icon={<QuestionCircleOutlined />}>
+              <a icon={<QuestionCircleOutlined />} href="/help">Help</a>
             </Menu.Item>
           </>
         )}

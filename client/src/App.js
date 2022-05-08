@@ -11,6 +11,8 @@ import Post from "./pages/Posts/Post";
 import LoggedInRoute from "./LoggedInRoute";
 import NotLoggedInRoute from "./NotLoggedInRoute";
 import NotFound from "./pages/NotFound/NotFound";
+import Help from "./components/Navbars/Help";
+import About from "./components/Navbars/About";
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
         <NotLoggedInRoute exact path="/login" component={Login} />
         <NotLoggedInRoute exact path="/signup" component={Signup} />
         <Route exact path="/user/posts" component={UserPosts} />
+        <Route exact path="/about" component={About} />
+        <Route exact path="/help" component={Help} />
         <Route exact path="/user/profile" component={UserProfile} />
         <Route exact path="/posts/view" component={Post} />
         <LoggedInRoute exact path="/posts/new" component={NewPost} />

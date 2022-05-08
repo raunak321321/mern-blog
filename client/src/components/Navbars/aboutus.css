@@ -1,0 +1,35 @@
+.options {
+    display: flex;
+    flex-direction: row;
+    /* width: %; */
+    justify-content:space-between;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    color: white;
+    background: #577783;
+    padding: 5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border: 0px solid white;
+    border-radius: 10px;
+}
+
+.option1 {
+    width: 40%;
+    height: 10rem;
+    
+}
+.option2 {
+    width: 40%;
+    height: 10rem;
+}
+
+#abt1 {
+    background-color: #577783;
+    color: white;
+}
+
+.abt {
+    border: 0px solid white;
+    border-radius: 10px;
+}
