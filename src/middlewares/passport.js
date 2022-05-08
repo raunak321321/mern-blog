@@ -5,7 +5,7 @@ const ExtractJwt = PassportJwt.ExtractJwt;
 
 const opts = {};
 opts.jwtFromRequest = ExtractJwt.fromAuthHeaderAsBearerToken();
-opts.secretOrKey = process.env.SECRET_KEY;
+opts.secretOrKey = "1211";
 
 export const passport = () => {
   passport.use(

@@ -42,5 +42,5 @@ connectDB();
     "testName"
   );
 
-  await closeDB();
+  // await closeDB();
 })();

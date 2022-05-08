@@ -39,7 +39,11 @@ router.post("/login", async (req, res) => {
   // Validation
   const { errors, isValid } = validateSignin(reqUser);
   if (!isValid) {
+    console.log("ssqq");
     return res.status(400).json(errors);
+  }
+  else {
+    // console.log("Hello Raunak");
   }
   const email = reqUser.email;
   const password = reqUser.password;
@@ -48,6 +52,8 @@ router.post("/login", async (req, res) => {
   try {
     const user = await User.findOne({ email });
     if (!user) return res.status(404).json({ error: "Email not found" });
+    if (user == []) { console.log("No such email") }
+    else console.log(user)
     if (!user.validPassword(password)) {
       return res.status(400).json({ error: "Incorrect password" });
     }
@@ -60,7 +66,7 @@ router.post("/login", async (req, res) => {
     };
     jwt.sign(
       payload,
-      process.env.SECRET_KEY,
+      "1211",
       {
         expiresIn: 31556926, // 1 year in seconds
       },
@@ -72,6 +78,7 @@ router.post("/login", async (req, res) => {
     );
   } catch (error) {
     console.log(error);
+    console.log("Pagala h kya");
     return res.status(500).json({ error: error.toString() });
   }
 });

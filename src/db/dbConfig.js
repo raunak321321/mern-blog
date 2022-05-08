@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const connectDB = async () => {
   try {
-    const uri = process.env.MONGO_URI;
+    const uri = "mongodb://localhost:27017";
     await mongoose
       .connect(uri, {
         useNewUrlParser: true,
@@ -10,9 +10,9 @@ const connectDB = async () => {
         useUnifiedTopology: true,
         dbName: "mern-blog-db",
       })
+      .then(() => { console.log("MONGODB CONNECTED SUCCESSFULLY!"); })
       .catch((error) => console.log(error));
     const connection = mongoose.connection;
-    console.log("MONGODB CONNECTED SUCCESSFULLY!");
   } catch (error) {
     console.log(error);
     return error;
